@@ -5,9 +5,9 @@ function redirectToGoogleCalendar() {
     // Datos del evento
     const title = 'Cumple de Kasim'; // Título del evento
     const details = 'Festejo de cumpleaños'; // Descripción del evento
-    const location = 'Rincon de Ensueños'; // Ubicación del evento
-    const startDate = '2024-10-30T09:00:00'; // Fecha y hora de inicio (en formato ISO)
-    const endDate = '2024-10-30T10:00:00'; // Fecha y hora de fin (en formato ISO)
+    const location = 'Salon Patuta'; // Ubicación del evento
+    const startDate = '2024-11-23T12:30:00'; // Fecha y hora de inicio (en formato ISO)
+    const endDate = '2024-11-23T16:30:00'; // Fecha y hora de fin (en formato ISO)
 
     // URL de Google Calendar
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}&dates=${startDate}/${endDate}`;
@@ -21,7 +21,7 @@ document.getElementById('boton-calendario').addEventListener('click', redirectTo
 
 
 document.getElementById('whatsapp-boton').addEventListener('click', function() {
-    const phoneNumber = '3815545723';  // Número de teléfono al que se enviará el mensaje
+    const phoneNumber = '3815575828';  // Número de teléfono al que se enviará el mensaje
     const message = 'Hola, quiero confirmar mi asistencia al evento.';  // Mensaje a enviar
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -29,14 +29,14 @@ document.getElementById('whatsapp-boton').addEventListener('click', function() {
 });
 
 document.getElementById('mapsButton').addEventListener('click', function() {
-    const address = 'Buenos Aires 338, T4000 San Miguel de Tucumán, Tucumán';  // Dirección del evento
+    const address = 'Salón Patuta, Unnamed Road, Lules, Tucumán';  // Dirección del evento
 
-    const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
+    const mapsUrl = `https://www.google.com/maps?q= ${encodeURIComponent(address)}`;
     window.open(mapsUrl, '_blank');
 });
 
 // Fecha objetivo para la cuenta regresiva (por ejemplo, el 31 de diciembre de 2024)
-const targetDate = new Date('Novembre 23, 2024 18:00:00').getTime();
+const targetDate = new Date('Novembre 23, 2024 12:30:00').getTime();
 
 const countdown = () => {
     const now = new Date().getTime();
